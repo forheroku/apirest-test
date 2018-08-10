@@ -5,6 +5,11 @@ const request = require('request');
 
 aplicacion.set('port', process.env.PORT || 3000);
 
+aplicacion.get('/api', (request, response) => {
+    response.json({
+        "msg": "Estoy en la API"
+    });
+});
 
 aplicacion.post('/api/:rut/:dve', (request, response) => {
     response.json({
